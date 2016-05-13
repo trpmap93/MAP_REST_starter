@@ -1,0 +1,6 @@
+framework module Pods_MAP_REST_starter {
+  umbrella header "Pods-MAP_REST_starter-umbrella.h"
+
+  export *
+  module * { export * }
+}
