@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let todoEndpoint: String = "http://jsonplaceholder.typicode.com/todos/1"
+        let todoEndpoint: String = "http://api.androidhive.info/contacts/"
         Alamofire.request(.GET, todoEndpoint)
             .responseJSON { response in
                 //handle JSON
@@ -31,17 +31,17 @@ class ViewController: UIViewController {
                     let todo = JSON(value)
                     
                     // now we have the results, let's print them through a table view would be better
-                    print ("THe todo is: " + todo.description)
-                    if let title = todo["title"].string {
+                  print ("THe todo is: " + todo.description)
+                   // if let title = todo["title"].string {
                         // to access a field
-                        print("The title is: " + title)
-                        }
-                    else {
-                        print ("error parsing /todos/1")
+                     //   print("The title is: " + title)
+                    //    }
+                   // else {
+                    //    print ("error parsing /todos/1")
                         
                     }
                 }
-            }
+         
         
             .responseString { response in
             // print response as a string for debug, test, etc
