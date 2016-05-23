@@ -13,7 +13,7 @@ class JSONTableVIewDataSource:  NSObject, UITableViewDataSource {
     
     var jSONThings :[AnyObject]
     var cellIdentifier: String
-    let header = "Names"
+    //let header = "Names"
     
     init(jSONThings: [AnyObject]!, cellIdentifier: String!) {
         self.jSONThings = jSONThings

@@ -11,6 +11,7 @@ import Alamofire
 import SwiftyJSON
 
 class ViewController: UIViewController {
+    var arrRes = [[String:AnyObject]]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,32 +22,47 @@ class ViewController: UIViewController {
             .responseJSON { response in
                 //handle JSON
                 guard response.result.error == nil else {
-                    print ("error calling GET on /todos/1")
+                    print ("error calling GET")
                     print (response.result.error)
                     return
                 }
                 
                 if let value = response.result.value {
-                    //handle results as JSON without a ton of nested loops
+                    //handle results as JSON without a ton of nested loops (todo is equal to swiftyJSONVar below in comments)
                     let todo = JSON(value)
                     
+                    if let resData = todo["contacts"].arrayObject {
+                        self.arrRes = resData as![[String:AnyObject]]
+                    }
+                    
+                    if self.arrRes.count>0 {
+                        //tableview reload
+                    }
+                    
                     // now we have the results, let's print them through a table view would be better
-                  print ("THe todo is: " + todo.description)
-                   // if let title = todo["title"].string {
-                        // to access a field
-                     //   print("The title is: " + title)
-                    //    }
-                   // else {
-                    //    print ("error parsing /todos/1")
+                 //  print ("THe todo is: " + todo.description)
+                
+                   // print ("The resData =" + self.arrRes.description)
+                
+                    
+                   for i in 0...(self.arrRes.count - 1) {
+                    
+                    
+                    var dict = self.arrRes[i]
+                    print (dict["name"] as! String)
+                    print (dict["email"] as! String)
                         
                     }
-                }
+                
+            }
+            
+            }
          
         
             .responseString { response in
             // print response as a string for debug, test, etc
-                print (response.result.value)
-                print (response.result.error)
+               // print (response.result.value)
+               // print (response.result.error)
                 
         }
     }
@@ -59,4 +75,5 @@ class ViewController: UIViewController {
 
 
 }
+
 
