@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,14 +18,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KwF-cx-78b">
-                                <rect key="frame" x="28" y="68" width="541" height="347"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KwF-cx-78b">
+                                <rect key="frame" x="28" y="68" width="544" height="347"/>
                                 <connections>
                                     <segue destination="bW2-qE-vaQ" kind="embed" id="13y-0d-efW"/>
                                 </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KwF-cx-78b" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="Thb-V4-Qia"/>
+                            <constraint firstItem="KwF-cx-78b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zg2-yE-ntO"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KwF-cx-78b" secondAttribute="bottom" constant="185" id="f24-pv-DPO"/>
+                            <constraint firstItem="KwF-cx-78b" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="48" id="fwc-XB-hUm"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -34,24 +41,40 @@
         <!--Table View Controller-->
         <scene sceneID="cyP-oj-lpn">
             <objects>
-                <tableViewController id="bW2-qE-vaQ" customClass="JSONTableViewController" customModule="MAP_REST_starter" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="bW2-qE-vaQ" customClass="TableViewController" customModule="MAP_REST_starter" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="lc2-Bm-fUX">
-                        <rect key="frame" x="0.0" y="0.0" width="541" height="347"/>
+                        <rect key="frame" x="0.0" y="0.0" width="544" height="347"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="HPB-4F-VEK">
-                                <rect key="frame" x="0.0" y="28" width="541" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="9UU-fE-agd" detailTextLabel="zbO-05-xtA" style="IBUITableViewCellStyleSubtitle" id="HPB-4F-VEK">
+                                <rect key="frame" x="0.0" y="28" width="544" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HPB-4F-VEK" id="HYJ-dp-MhF">
-                                    <rect key="frame" x="0.0" y="0.0" width="541" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="544" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9UU-fE-agd">
+                                            <rect key="frame" x="15" y="6" width="31.5" height="19.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zbO-05-xtA">
+                                            <rect key="frame" x="15" y="25.5" width="40.5" height="13.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="bW2-qE-vaQ" id="Gj0-Aa-xsa"/>
-                            <outlet property="delegate" destination="bW2-qE-vaQ" id="5yJ-Ci-Udg"/>
+                            <outlet property="dataSource" destination="bW2-qE-vaQ" id="j2w-br-6UT"/>
+                            <outlet property="delegate" destination="bW2-qE-vaQ" id="3rY-Vj-Y8z"/>
                         </connections>
                     </tableView>
                 </tableViewController>

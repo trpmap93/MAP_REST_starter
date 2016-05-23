@@ -15,9 +15,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+}
         // Do any additional setup after loading the view, typically from a nib.
         
-        let todoEndpoint: String = "http://api.androidhive.info/contacts/"
+    /*    let todoEndpoint: String = "http://api.androidhive.info/contacts/"
         Alamofire.request(.GET, todoEndpoint)
             .responseJSON { response in
                 //handle JSON
@@ -76,4 +78,5 @@ class ViewController: UIViewController {
 
 }
 
-
+*/
+}

@@ -8,10 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		718BF66EAD8AC6D2E2ED1E31 /* Pods_MAP_REST_starter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0A527C3AA02ECFE1E11CF3 /* Pods_MAP_REST_starter.framework */; };
-		AB3ACF281CE592BB00319842 /* JSONTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3ACF271CE592BB00319842 /* JSONTableViewController.swift */; };
 		AB3ACF2A1CE592FE00319842 /* JSONTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3ACF291CE592FE00319842 /* JSONTableViewCell.swift */; };
-		AB3ACF2C1CE5969A00319842 /* JSONTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3ACF2B1CE5969A00319842 /* JSONTableViewDelegate.swift */; };
-		AB3ACF2E1CE598EF00319842 /* JSONTableViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3ACF2D1CE598EF00319842 /* JSONTableViewDatasource.swift */; };
+		EF8CAE8E1CF2DBEC00C888A2 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8CAE8D1CF2DBEC00C888A2 /* TableViewController.swift */; };
 		EFA7A58F1CDC2C6100E7D1BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA7A58E1CDC2C6100E7D1BA /* AppDelegate.swift */; };
 		EFA7A5911CDC2C6100E7D1BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA7A5901CDC2C6100E7D1BA /* ViewController.swift */; };
 		EFA7A5941CDC2C6100E7D1BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFA7A5921CDC2C6100E7D1BA /* Main.storyboard */; };
@@ -21,12 +19,10 @@
 
 /* Begin PBXFileReference section */
 		3D360A5221C20BEE20823FF2 /* Pods-MAP_REST_starter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAP_REST_starter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MAP_REST_starter/Pods-MAP_REST_starter.debug.xcconfig"; sourceTree = "<group>"; };
-		AB3ACF271CE592BB00319842 /* JSONTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONTableViewController.swift; sourceTree = "<group>"; };
 		AB3ACF291CE592FE00319842 /* JSONTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONTableViewCell.swift; sourceTree = "<group>"; };
-		AB3ACF2B1CE5969A00319842 /* JSONTableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONTableViewDelegate.swift; sourceTree = "<group>"; };
-		AB3ACF2D1CE598EF00319842 /* JSONTableViewDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONTableViewDatasource.swift; sourceTree = "<group>"; };
 		BC0A527C3AA02ECFE1E11CF3 /* Pods_MAP_REST_starter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MAP_REST_starter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9602509B921443FF55B30C4 /* Pods-MAP_REST_starter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAP_REST_starter.release.xcconfig"; path = "Pods/Target Support Files/Pods-MAP_REST_starter/Pods-MAP_REST_starter.release.xcconfig"; sourceTree = "<group>"; };
+		EF8CAE8D1CF2DBEC00C888A2 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		EFA7A58B1CDC2C6100E7D1BA /* MAP_REST_starter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MAP_REST_starter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFA7A58E1CDC2C6100E7D1BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFA7A5901CDC2C6100E7D1BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -92,10 +88,8 @@
 				EFA7A5951CDC2C6100E7D1BA /* Assets.xcassets */,
 				EFA7A5971CDC2C6100E7D1BA /* LaunchScreen.storyboard */,
 				EFA7A59A1CDC2C6100E7D1BA /* Info.plist */,
-				AB3ACF271CE592BB00319842 /* JSONTableViewController.swift */,
+				EF8CAE8D1CF2DBEC00C888A2 /* TableViewController.swift */,
 				AB3ACF291CE592FE00319842 /* JSONTableViewCell.swift */,
-				AB3ACF2B1CE5969A00319842 /* JSONTableViewDelegate.swift */,
-				AB3ACF2D1CE598EF00319842 /* JSONTableViewDatasource.swift */,
 			);
 			path = MAP_REST_starter;
 			sourceTree = "<group>";
@@ -222,11 +216,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB3ACF2C1CE5969A00319842 /* JSONTableViewDelegate.swift in Sources */,
 				EFA7A5911CDC2C6100E7D1BA /* ViewController.swift in Sources */,
-				AB3ACF2E1CE598EF00319842 /* JSONTableViewDatasource.swift in Sources */,
 				EFA7A58F1CDC2C6100E7D1BA /* AppDelegate.swift in Sources */,
-				AB3ACF281CE592BB00319842 /* JSONTableViewController.swift in Sources */,
+				EF8CAE8E1CF2DBEC00C888A2 /* TableViewController.swift in Sources */,
 				AB3ACF2A1CE592FE00319842 /* JSONTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
